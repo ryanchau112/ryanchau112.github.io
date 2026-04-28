@@ -2,16 +2,16 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryan Chau | Projects</title>
 
   <style>
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
       background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
@@ -21,55 +21,81 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     header h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
     }
 
     nav a {
       margin-left: 18px;
       color: #0170b9;
       text-decoration: none;
+      font-weight: 500;
     }
 
-    section {
-      max-width: 1100px;
+    .hero {
+      background: #e6f0f8;
+      padding: 60px 8%;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin: 0 0 12px;
+    }
+
+    main {
+      max-width: 1050px;
       margin: 40px auto;
       padding: 0 8%;
     }
 
-    h2 {
-      margin-bottom: 20px;
-    }
-
     .project {
       background: #fff;
-      padding: 24px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      margin-bottom: 26px;
     }
 
     .project h3 {
       margin-top: 0;
+      color: #222;
     }
 
-    .project a {
+    .tags span {
       display: inline-block;
-      margin-top: 10px;
+      background: #e6f0f8;
       color: #0170b9;
-      text-decoration: none;
-      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin: 4px 6px 4px 0;
     }
 
     footer {
-      text-align: centre;
+      text-align: center;
       padding: 30px;
+      color: #666;
       background: #fff;
       border-top: 1px solid #e5e5e5;
-      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        margin-top: 12px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
     }
   </style>
 </head>
@@ -81,50 +107,117 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
+    <a href="index.html#contact">Contact</a>
   </nav>
 </header>
 
-<section>
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>SQL Performance Logging Tool</h3>
-    <p>
-      Built a scheduled SQL Server logging system to track performance of
-      heavy queries and updates in production, helping identify bottlenecks
-      and optimise database performance.
-    </p>
-    <a href="#">View details</a>
-  </div>
-
-  <div class="project">
-    <h3>Coswin Dashboard (Python Flask)</h3>
-    <p>
-      Developed a Flask web dashboard to visualise SQL Server KPIs and system
-      activity, deployed via IIS using WFastCGI.
-    </p>
-    <a href="#">View details</a>
-  </div>
-
-  <div class="project">
-    <h3>ETL Comparison Script</h3>
-    <p>
-      Created a Python + pyodbc script to compare legacy data files against
-      system records and identify mismatches for re-import.
-    </p>
-    <a href="#">View details</a>
-  </div>
-
-  <div class="project">
-    <h3>n8n Job Automation Pipeline</h3>
-    <p>
-      Built an automated workflow to fetch, filter and score job listings,
-      integrating APIs and Google Sheets for tracking.
-    </p>
-    <a href="#">View details</a>
-  </div>
-
+<section class="hero">
+  <h2>Projects & Created Tools</h2>
+  <p>
+    These are self-made tools and technical projects I have built to improve
+    workflows, automate tasks, monitor systems and solve practical business problems.
+  </p>
 </section>
+
+<main>
+
+  <div class="project">
+    <h3>Python Flask CCTV Monitoring Dashboard</h3>
+    <p>
+      Built a Python Flask application that monitors CCTV device status using
+      IMAP email notifications. The system reads device emails, tracks when
+      devices go offline or come back online, and presents the information in
+      a browser-based dashboard.
+    </p>
+    <p>
+      The dashboard provides real-time status visibility, downloadable records,
+      automatic updates and IIS integration for access through a Windows server.
+    </p>
+    <div class="tags">
+      <span>Python</span>
+      <span>Flask</span>
+      <span>IMAP</span>
+      <span>IIS</span>
+      <span>HTML</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>SQL Triggers and Crystal Reports</h3>
+    <p>
+      Developed SQL triggers and Crystal Reports as part of my SQL Integration
+      Specialist role. The work involved automating database actions, supporting
+      data integrity, and producing reports for business operations.
+    </p>
+    <p>
+      This project strengthened my experience in Microsoft SQL Server,
+      operational reporting, asset-management systems and production database support.
+    </p>
+    <div class="tags">
+      <span>SQL Server</span>
+      <span>T-SQL</span>
+      <span>Triggers</span>
+      <span>Crystal Reports</span>
+      <span>Database Support</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>CUE Card Tracker App</h3>
+    <p>
+      Built a card-tracking app for the strategic card game CUE. The idea came
+      from a practical gameplay problem: players benefit from tracking previously
+      played cards to better predict future draws.
+    </p>
+    <p>
+      I designed and built the app from scratch, learning SwiftUI and Xcode,
+      creating a prototype, preparing supporting documents, running beta testing,
+      submitting it for Apple review and publishing it on the App Store.
+    </p>
+    <div class="tags">
+      <span>SwiftUI</span>
+      <span>Xcode</span>
+      <span>iOS App</span>
+      <span>UX</span>
+      <span>Product Build</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Custom Browser Extension Shortcuts</h3>
+    <p>
+      Created a custom browser extension to speed up a frequent daily workflow:
+      accessing webpages linked to specific datasets. The extension allows an ID
+      to be entered and opens the relevant dashboard in one click.
+    </p>
+    <p>
+      This reduced repetitive manual navigation and made operational work faster
+      and more consistent.
+    </p>
+    <div class="tags">
+      <span>Browser Extension</span>
+      <span>JavaScript</span>
+      <span>Workflow Automation</span>
+      <span>Operations</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Spreadsheet, VBA and Workflow Tools</h3>
+    <p>
+      Created practical tools including formulated spreadsheets, VBA macros,
+      custom keyboard shortcuts and operational shortcuts to improve campaign
+      setup and application-support workflows.
+    </p>
+    <div class="tags">
+      <span>Excel</span>
+      <span>VBA</span>
+      <span>Automation</span>
+      <span>Process Improvement</span>
+    </div>
+  </div>
+
+</main>
 
 <footer>
   © 2026 Ryan Chau
