@@ -202,19 +202,17 @@
     </h4>
 
     <div id="wa-form" style="display:none; margin-top:10px;">
-      <form onsubmit="formatMessage()" target="_blank" action="https://api.whatsapp.com/send">
-        <p style="font-size:14px;">
-          Simple tool demonstrating how inputs can trigger actions instantly.
-        </p>
+      <form target="_blank" action="https://api.whatsapp.com/send">
+      <label>Phone number:</label><br>
+      <input type="text" name="phone" value="447861269176"><br><br>
+    
+      <label>Message:</label><br>
+      <input type="text" name="text" value="Hi Ryan, I just checked out your website!" style="width:100%; max-width:400px;"><br><br>
+    
+      <input type="submit" value="Send in WhatsApp">
+    </form>
 
-        <label>Phone number:</label><br>
-        <input type="text" name="phone" value="447861269176"><br><br>
-
-        <label>Message:</label><br>
-        <input type="text" name="text" value="Hi Ryan, I just checked out your website!" style="width:100%; max-width:400px;"><br><br>
-
-        <input type="submit" value="Send in WhatsApp">
-      </form>
+      
     </div>
   </div>
 
@@ -232,10 +230,7 @@ function toggleAccordion() {
   el.style.display = (el.style.display === "none") ? "block" : "none";
 }
 
-function formatMessage() {
-  const textInput = document.querySelector('#wa-form input[name="text"]');
-  textInput.value = encodeURIComponent(textInput.value);
-}
+
 </script>
 
   <div class="project">
