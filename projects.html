@@ -183,24 +183,60 @@
     </div>
   </div>
 
-  <div class="project">
-    <h3>Custom Browser Extension Shortcuts</h3>
-    <p>
-      Created a custom browser extension to speed up a frequent daily workflow:
-      accessing webpages linked to specific datasets. The extension allows an ID
-      to be entered and opens the relevant dashboard in one click.
-    </p>
-    <p>
-      This reduced repetitive manual navigation and made operational work faster
-      and more consistent.
-    </p>
-    <div class="tags">
-      <span>Browser Extension</span>
-      <span>JavaScript</span>
-      <span>Workflow Automation</span>
-      <span>Operations</span>
+<div class="project">
+  <h3>Custom Browser Extension Shortcuts</h3>
+  <p>
+    Created a custom browser extension to speed up a frequent daily workflow:
+    accessing webpages linked to specific datasets. The extension allows an ID
+    to be entered and opens the relevant dashboard in one click.
+  </p>
+  <p>
+    This reduced repetitive manual navigation and made operational work faster
+    and more consistent.
+  </p>
+
+  <!-- Demo Accordion -->
+  <div style="margin-top:15px;">
+    <h4 onclick="toggleAccordion()" style="cursor:pointer; color:#0073e6;">
+      ▶ Try a similar idea: Send a WhatsApp message
+    </h4>
+
+    <div id="wa-form" style="display:none; margin-top:10px;">
+      <form onsubmit="formatMessage()" target="_blank" action="https://api.whatsapp.com/send">
+        <p style="font-size:14px;">
+          Simple tool demonstrating how inputs can trigger actions instantly.
+        </p>
+
+        <label>Phone number:</label><br>
+        <input type="text" name="phone" value="447861269176"><br><br>
+
+        <label>Message:</label><br>
+        <input type="text" name="text" value="Hi Ryan, I just checked out your website!" style="width:100%; max-width:400px;"><br><br>
+
+        <input type="submit" value="Send in WhatsApp">
+      </form>
     </div>
   </div>
+
+  <div class="tags">
+    <span>Browser Extension</span>
+    <span>JavaScript</span>
+    <span>Workflow Automation</span>
+    <span>Operations</span>
+  </div>
+</div>
+
+<script>
+function toggleAccordion() {
+  const el = document.getElementById("wa-form");
+  el.style.display = (el.style.display === "none") ? "block" : "none";
+}
+
+function formatMessage() {
+  const textInput = document.querySelector('#wa-form input[name="text"]');
+  textInput.value = encodeURIComponent(textInput.value);
+}
+</script>
 
   <div class="project">
     <h3>Spreadsheet, VBA and Workflow Tools</h3>
